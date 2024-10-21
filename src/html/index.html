@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="../output.css">
+    <link rel="stylesheet" href="../css/contents.css">
+    <title>올리브영 온라인몰</title>
+</head>
+<body>
+    <header>
+        <div class="flex justify-center w-full border-b border-b-zinc-300">
+            <img src="../images/img_header.jpg" alt="헤더_PC" class="hidden md:block">
+            <img src="../images/img_m_header.jpg" alt="헤더_MO" class="block md:hidden">
+        </div>
+    </header>
+    
+    <main class="overflow-x-hidden">
+        <!-- 플로팅 메뉴 -->
+        <div class="relative mx-auto w-[1080px] [&>.Side]:absolute hidden xl:block">
+            <div class="Side Side-left top-12 left-[-355px] relative">
+                <img src="../images/side_left_item.png" alt="플로팅 메뉴- 좌측">
+                <a href="#" class="absolute top-0 right-0 w-6 h-6"><span class="sr-only">닫기</span></a>
+            </div>
+            <div class="Side Side-right top-12 right-[-330px] relative">
+                <img src="../images/side_right_item.png" alt="플로팅 메뉴- 우측">
+                <a href="#" class="absolute top-0 right-0 w-6 h-6"><span class="sr-only">닫기</span></a>
+            </div>
+        </div>
+        <!-- //플로팅 메뉴 -->
+        
+        <!-- 404 타이틀 -->
+        <div class="w-full mt-3 mb-8 lg:mt-7 lg:mb-14">
+            <img src="../images/area_404_img.png" alt="404 타이틀_PC" class="hidden w-4/5 mx-auto xl:w-auto md:block">
+            <img src="../images/area_404_img_mo.png" alt="404 타이틀_MO" class="block w-full mx-auto md:hidden">
+        </div>
+        <!-- //404 타이틀 -->
+        
+        <!-- 급상승 검색어 -->
+        <div class="w-11/12 mx-auto lg:w-[956px]">
+            <div class="flex flex-col w-full h-auto gap-4 lg:gap-8 Rank md:flex-row">
+                <div class="swiper swiper-rank w-full md:w-[496px] h-auto">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="../images/slide01.png" alt="급상승 검색어 상품-01"></div>
+                        <div class="swiper-slide"><img src="../images/slide02.png" alt="급상승 검색어 상품-02"></div>
+                        <div class="swiper-slide"><img src="../images/slide03.png" alt="급상승 검색어 상품-03"></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="">
+                    <img src="../images/rank.png" alt="검색어_PC" class="hidden md:block">
+                    <img src="../images/rank_mo.png" alt="검색어_MO" class="block w-full md:hidden">
+                </div>
+            </div>
+        </div>
+        <!-- //급상승 검색어 -->
+
+        <!-- 할인 상품 -->
+        <div class="mx-auto mt-8 mb-12 lg:mt-14 lg:mb-16 w-11/12 max-w-[1096px]">
+            <div class="flex items-center justify-between mb-3 lg:mb-5 p-0 xl:pl-[70px]">
+                <span class="text-base font-semibold text-black md:text-xl">절찬 할인 상품.ZIP</span>
+            </div>
+            <div class="swiper swiper-sale w-full max-w-[1096px] h-auto px-0 lg:px-[70px]">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="../images/sale_item01.png" alt="할인 상품-01">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/sale_item02.png" alt="할인 상품-02">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/sale_item03.png" alt="할인 상품-03">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/sale_item04.png" alt="할인 상품-04">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/sale_item01.png" alt="할인 상품-05">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="../images/sale_item02.png" alt="할인 상품-06">
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </div>
+        <!-- //할인 상품 -->
+    </main>
+
+    <footer class="relative bg-white">
+        <div class="flex justify-center w-full border-t-2 border-t-zinc-400">
+            <img src="../images/img_footer.jpg" alt="푸터_PC" class="hidden md:block">
+            <img src="../images/img_m_footer.jpg" alt="푸터_MO" class="block md:hidden">
+        </div>
+    </footer>
+
+    <script>
+        // 급상승 검색어
+        var swiper = new Swiper('.swiper-rank', {
+            effect : 'slide',
+            loop : true,
+            autoplay: {
+                delay: 5000, 
+                disableOnInteraction: false
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable : true,
+            },
+        });
+
+        // 할인 상품
+        var swiperSale = new Swiper('.swiper-sale', {
+            slidesPerView : 2.5,
+            spaceBetween : 18,
+            loop: true,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints:{
+                768 : {
+                    slidesPerView : 4,
+                    spaceBetween : 32,
+                }
+            },
+        });
+
+        // 플로팅 메뉴
+        var floatPosition = parseInt($(".Side").css('top'));
+        var footerOffset = $('footer').offset().top;
+        var sideHeight = $(".Side").outerHeight();
+        var offsetBuffer = 180;
+
+        $(window).scroll(function() {
+            var currentTop = $(window).scrollTop();
+            var bannerTop = currentTop + floatPosition;
+
+            if (bannerTop + sideHeight > footerOffset - offsetBuffer) {
+                bannerTop = footerOffset - sideHeight - offsetBuffer;
+            }
+
+            $(".Side").stop().animate({
+                "top" : bannerTop + "px"
+            }, 300);
+        }).scroll();
+
+        $(function() {
+            $('.Side a').on('click', function(event) {
+                event.preventDefault();
+                $(this).closest('.Side').hide();
+            });
+        });
+    </script>
+</body>
+</html>

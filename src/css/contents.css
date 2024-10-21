@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Noto+Sans+KR&display=swap');
+
+body{font-family: "Montserrat", "Noto Sans KR", sans-serif !important;}
+
+.swiper-rank .swiper-pagination-bullet{width: 15px;height: 15px;background-color: #CACACA;opacity: 1;}
+.swiper-rank .swiper-pagination-bullet-active{background-color: #80DE26;}
+
+.swiper-sale .swiper-button-prev{left: 0px;justify-content: flex-start;}
+.swiper-sale .swiper-button-next{right: 0px;justify-content: flex-end;}
+.swiper-sale .swiper-button-prev,
+.swiper-sale .swiper-button-next{width: 70px;height: 100%;background: #fff;top: 22px;}
+.swiper-sale .swiper-button-next:after, 
+.swiper-sale .swiper-button-prev:after{font-size: 15px;color: #fff;font-weight: 900;width: 38px;height: 38px;background: #d9d9d9;border-radius: 50%;display: flex;justify-content: center;align-items: center;}
+
+footer::before,
+footer::after{content: "";display: block;position: absolute;top: 53px;left: 0;width: 100%;height: 1px;background: #ddd;}
+footer::after{top: auto;bottom: 39px;}
+
+/* 반응형 모바일 */
+@media screen and (max-width:768px) {
+    .swiper-sale .swiper-button-prev,
+    .swiper-sale .swiper-button-next{display: none;}
+
+    footer::before,
+    footer::after{display: none;}
+}
